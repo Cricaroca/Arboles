@@ -1,0 +1,4 @@
+C:\Users\CRISTIAN\Documents\Visual Studio 2010\Projects\IS2\IS2\bin\IS2.dll
+C:\Users\CRISTIAN\Documents\Visual Studio 2010\Projects\IS2\IS2\bin\IS2.pdb
+C:\Users\CRISTIAN\Documents\Visual Studio 2010\Projects\IS2\IS2\obj\Debug\IS2.dll
+C:\Users\CRISTIAN\Documents\Visual Studio 2010\Projects\IS2\IS2\obj\Debug\IS2.pdb
