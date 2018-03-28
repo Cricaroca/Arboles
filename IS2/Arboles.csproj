@@ -152,6 +152,9 @@
     <Folder Include="App_Data\" />
     <Folder Include="Controlador\" />
     <Folder Include="Modelo\" />
+    <Folder Include="Vista\css\" />
+    <Folder Include="Vista\img\" />
+    <Folder Include="Vista\js\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Account\Web.config" />
