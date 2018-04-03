@@ -12,18 +12,21 @@
 
         <div id="header">
             <div id="title">
-                <h1>My MVC Application</h1>
+                <asp:Image ID="Image1" runat="server" ImageUrl="~/Content/img/logo.jpg" 
+                    Height="58px" Width="175px" /><h1>Herramienta para el Aprendizaje de Arboles</h1>
             </div>
               
-            <div id="logindisplay">
-                <% Html.RenderPartial("LogOnUserControl"); %>
-            </div> 
-            
+            <div>
+            </div><br /><br /> <br />
+                
             <div id="menucontainer">
             
                 <ul id="menu">              
-                    <li><%: Html.ActionLink("Home", "Index", "Home")%></li>
-                    <li><%: Html.ActionLink("About", "About", "Home")%></li>
+                    <li><%: Html.ActionLink("Inicio", "Index", "Home")%></li>
+                    <li><%: Html.ActionLink("Aprender", "Conceptos", "Aprender")%></li>
+                    <li><%: Html.ActionLink("Practicar", "Ejercicios", "Practicar")%></li>
+                    <li><%: Html.ActionLink("Evaluar", "Valuacion", "Evaluar")%></li>
+                    <li><%: Html.ActionLink("Acerca de", "About", "Home")%></li>
                 </ul>
             
             </div>
