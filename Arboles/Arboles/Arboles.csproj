@@ -65,6 +65,11 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConjuntoDatos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ConjuntoDatos.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AprenderController.cs" />
     <Compile Include="Controllers\EvaluarController.cs" />
@@ -81,9 +86,55 @@
     <Content Include="App_Data\Preguntas_log.ldf">
       <DependentUpon>Preguntas.mdf</DependentUpon>
     </Content>
+    <Content Include="bin\Arboles.dll" />
+    <Content Include="bin\Arboles.pdb" />
+    <Content Include="Content\assets\icons\book.ico" />
+    <Content Include="Content\assets\icons\mCSB_buttons.png" />
+    <Content Include="Content\assets\icons\SelectMaterialIndicator-white.png" />
+    <Content Include="Content\assets\icons\SelectMaterialIndicator.png" />
+    <Content Include="Content\assets\img\book.png" />
+    <Content Include="Content\assets\img\calendar.png" />
+    <Content Include="Content\assets\img\calendar_book.png" />
+    <Content Include="Content\assets\img\category.png" />
+    <Content Include="Content\assets\img\chart.png" />
+    <Content Include="Content\assets\img\checklist.png" />
+    <Content Include="Content\assets\img\clock.png" />
+    <Content Include="Content\assets\img\flat-book.png" />
+    <Content Include="Content\assets\img\font-login.jpg" />
+    <Content Include="Content\assets\img\institution.png" />
+    <Content Include="Content\assets\img\logo.png" />
+    <Content Include="Content\assets\img\pdf.png" />
+    <Content Include="Content\assets\img\section.png" />
+    <Content Include="Content\assets\img\user-sesion.png" />
+    <Content Include="Content\assets\img\user.png" />
+    <Content Include="Content\assets\img\user01.png" />
+    <Content Include="Content\assets\img\user02.png" />
+    <Content Include="Content\assets\img\user03.png" />
+    <Content Include="Content\assets\img\user04.png" />
+    <Content Include="Content\assets\img\user05.png" />
+    <Content Include="Content\css\bootstrap.min.css" />
+    <Content Include="Content\css\jquery.mCustomScrollbar.css" />
+    <Content Include="Content\css\login.css" />
+    <Content Include="Content\css\material-design-iconic-font.min.css" />
+    <Content Include="Content\css\normalize.css" />
+    <Content Include="Content\css\style.css" />
+    <Content Include="Content\css\sweet-alert.css" />
+    <Content Include="Content\css\timeline.css" />
+    <Content Include="Content\fonts\AlegreyaSansSC-Regular.svg" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\fonts\Material-Design-Iconic-Font.svg" />
+    <Content Include="Content\fonts\OpenSans-CondLight.svg" />
+    <Content Include="Content\js\bootstrap.min.js" />
+    <Content Include="Content\js\jquery-1.11.2.min.js" />
+    <Content Include="Content\js\jquery.mCustomScrollbar.concat.min.js" />
+    <Content Include="Content\js\main.js" />
+    <Content Include="Content\js\modernizr.js" />
+    <Content Include="Content\js\sweet-alert.min.js" />
     <Content Include="Global.asax" />
+    <Content Include="Scripts\jquery.min.js" />
     <Content Include="Views\Aprender\Conceptos.aspx" />
     <Content Include="Views\Evaluar\Valuacion.aspx" />
+    <Content Include="Views\Home\Index.aspx" />
     <Content Include="Views\Practicar\Ejercicios.aspx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -110,7 +161,6 @@
     <Content Include="Views\Account\LogOn.aspx" />
     <Content Include="Views\Account\Register.aspx" />
     <Content Include="Views\Home\About.aspx" />
-    <Content Include="Views\Home\Index.aspx" />
     <Content Include="Views\Shared\Error.aspx" />
     <Content Include="Views\Shared\LogOnUserControl.ascx" />
     <Content Include="Views\Shared\Site.Master" />
@@ -118,6 +168,35 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\img\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ConjuntoDatos.xsc">
+      <DependentUpon>ConjuntoDatos.xsd</DependentUpon>
+    </None>
+    <None Include="ConjuntoDatos.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ConjuntoDatos.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ConjuntoDatos.xss">
+      <DependentUpon>ConjuntoDatos.xsd</DependentUpon>
+    </None>
+    <None Include="Content\fonts\AlegreyaSansSC-Regular.eot" />
+    <None Include="Content\fonts\AlegreyaSansSC-Regular.ttf" />
+    <None Include="Content\fonts\AlegreyaSansSC-Regular.woff" />
+    <None Include="Content\fonts\AlegreyaSansSC-Regular.woff2" />
+    <None Include="Content\fonts\glyphicons-halflings-regular.eot" />
+    <None Include="Content\fonts\glyphicons-halflings-regular.ttf" />
+    <None Include="Content\fonts\glyphicons-halflings-regular.woff" />
+    <None Include="Content\fonts\glyphicons-halflings-regular.woff2" />
+    <None Include="Content\fonts\Material-Design-Iconic-Font.eot" />
+    <None Include="Content\fonts\Material-Design-Iconic-Font.ttf" />
+    <None Include="Content\fonts\Material-Design-Iconic-Font.woff" />
+    <None Include="Content\fonts\Material-Design-Iconic-Font.woff2" />
+    <None Include="Content\fonts\OpenSans-CondLight.eot" />
+    <None Include="Content\fonts\OpenSans-CondLight.ttf" />
+    <None Include="Content\fonts\OpenSans-CondLight.woff" />
+    <None Include="Content\fonts\OpenSans-CondLight.woff2" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
