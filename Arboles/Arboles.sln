@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arboles", "Arboles\Arboles.csproj", "{10E318E6-9733-48BA-9ABE-E1DC24D07004}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arboles", "Arboles\Arboles.csproj", "{F331EEA5-3256-4519-AEF1-7C54F3793788}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,10 +9,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{10E318E6-9733-48BA-9ABE-E1DC24D07004}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{10E318E6-9733-48BA-9ABE-E1DC24D07004}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{10E318E6-9733-48BA-9ABE-E1DC24D07004}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{10E318E6-9733-48BA-9ABE-E1DC24D07004}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F331EEA5-3256-4519-AEF1-7C54F3793788}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F331EEA5-3256-4519-AEF1-7C54F3793788}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F331EEA5-3256-4519-AEF1-7C54F3793788}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F331EEA5-3256-4519-AEF1-7C54F3793788}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
