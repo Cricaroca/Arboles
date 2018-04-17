@@ -86,6 +86,11 @@
     <Content Include="Styles\assets\icons\mCSB_buttons.png" />
     <Content Include="Styles\assets\icons\SelectMaterialIndicator-white.png" />
     <Content Include="Styles\assets\icons\SelectMaterialIndicator.png" />
+    <Content Include="Styles\assets\img\ABC.PNG" />
+    <Content Include="Styles\assets\img\ABLL.PNG" />
+    <Content Include="Styles\assets\img\AI.PNG" />
+    <Content Include="Styles\assets\img\ANI.PNG" />
+    <Content Include="Styles\assets\img\AS.png" />
     <Content Include="Styles\assets\img\bienvenido.png" />
     <Content Include="Styles\assets\img\book.png" />
     <Content Include="Styles\assets\img\calendar.png" />
@@ -182,6 +187,11 @@
     <Compile Include="Conceptos.aspx.designer.cs">
       <DependentUpon>Conceptos.aspx</DependentUpon>
     </Compile>
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -235,6 +245,17 @@
     <Content Include="Site.Master" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
     <None Include="obj\Debug\Arboles.csprojResolveAssemblyReference.cache" />
     <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
     <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />

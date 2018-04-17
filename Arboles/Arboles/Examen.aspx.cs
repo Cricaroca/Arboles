@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data.SqlClient;
 using System.Configuration;
+using System.Data;
 
 namespace Arboles
 {
@@ -28,14 +29,33 @@ namespace Arboles
             cmd = new SqlCommand();
         }
 
+
         //Cargó la base de datos
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!Page.IsPostBack)
             {
                 loadgrid1();
+                Session["Timer"] = DateTime.Now.AddMinutes(1).ToString();
             }
         }
+
+
+        //Contador de tiempo
+        protected void timerTest_tick(object sen, EventArgs e)
+        {
+            if (DateTime.Compare(DateTime.Now, DateTime.Parse(Session["Timer"].ToString())) < 0)
+            {
+                litMsg.Text = "Time Left: " + ((Int32)DateTime.Parse(Session["Timer"].ToString()).Subtract(DateTime.Now).TotalMinutes)
+                    .ToString() + "Minutes" + (((Int32)DateTime.Parse(Session["Timer"].ToString()).Subtract(DateTime.Now).TotalSeconds) % 60)
+                    .ToString() + "Seconds";
+            }
+            else
+            {
+                Response.Redirect("Resultado.aspx");
+            }
+        }
+
 
         //Preguntas de Selección multiple única respuesta
         protected void Button1_Click(object sender, EventArgs e) //Carga la interfaz de dichas preguntas
@@ -43,22 +63,28 @@ namespace Arboles
             GridView1.Visible = true;
             Button7.Visible = true;
             Primero.Visible = true;
+            Label1.Visible = true;
+            litMsg.Visible = true;
 
             GridView2.Visible = false;
             Button8.Visible = false;
             Segundo.Visible = false;
-            Image1.Visible = false;
-            Label1.Visible = false;
+            Image1.Visible = false;            
 
             GridView3.Visible = false;
             Button9.Visible = false;
             Tercero.Visible = false;
 
-            //GridView4.Visible = false;
-            //GridView5.Visible = false;
-            //GridView6.Visible = false;            
-            //Button10.Visible = false;
-            //Button11.Visible = false;
+            GridView4.Visible = false;
+            Button10.Visible = false;
+            Cuarto.Visible = false;
+
+            rptTable.Visible = false;
+            Button11.Visible = false;
+            Quinto.Visible = false;
+            Enunciado.Visible = false;
+
+            //GridView6.Visible = false;                        
             //Button12.Visible = false;
             loadgrid1();
         }
@@ -143,16 +169,22 @@ namespace Arboles
             Segundo.Visible = true;
             Image1.Visible = true;
             Label1.Visible = true;
+            litMsg.Visible = true;
 
             GridView3.Visible = false;
             Button8.Visible = false;
             Tercero.Visible = false;
 
-            //GridView4.Visible = false;
-            //GridView5.Visible = false;
-            //GridView6.Visible = false;
-            //Button10.Visible = false;
-            //Button11.Visible = false;
+            GridView4.Visible = false;
+            Button10.Visible = false;
+            Cuarto.Visible = false;
+
+            rptTable.Visible = false;
+            Button11.Visible = false;
+            Quinto.Visible = false;
+            Enunciado.Visible = false;
+
+            //GridView6.Visible = false;                        
             //Button12.Visible = false;
             loadgrid2();
         }
@@ -218,7 +250,7 @@ namespace Arboles
 
 
         //Pregunta de Falso y Verdadero
-        protected void Button4_Click(object sender, EventArgs e) //Carga la interfaz de dichas preguntas
+        protected void Button3_Click(object sender, EventArgs e) //Carga la interfaz de dichas preguntas
         {
             GridView1.Visible = false;
             Button7.Visible = false;
@@ -228,17 +260,23 @@ namespace Arboles
             Button8.Visible = false;
             Segundo.Visible = false;
             Image1.Visible = false;
-            Label1.Visible = false;
 
             GridView3.Visible = true;
             Button9.Visible = true;
             Tercero.Visible = true;
+            Label1.Visible = true;
+            litMsg.Visible = true;
 
-            //GridView4.Visible = false;
-            //GridView5.Visible = false;
-            //GridView6.Visible = false;            
-            //Button10.Visible = false;
-            //Button11.Visible = false;
+            GridView4.Visible = false;
+            Button10.Visible = false;
+            Cuarto.Visible = false;
+
+            rptTable.Visible = false;
+            Button11.Visible = false;
+            Quinto.Visible = false;
+            Enunciado.Visible = false;
+
+            //GridView6.Visible = false;                        
             //Button12.Visible = false;
             loadgrid3();
         }
@@ -301,6 +339,138 @@ namespace Arboles
             rd.Dispose();
             count++;
         }
+
+
+        //Preguntas de Selección multiple única respuesta
+        protected void Button4_Click(object sender, EventArgs e) //Carga la interfaz de dichas preguntas
+        {
+            GridView1.Visible = false;
+            Button7.Visible = false;
+            Primero.Visible = false;
+
+            GridView2.Visible = false;
+            Button8.Visible = false;
+            Segundo.Visible = false;
+            Image1.Visible = false;
+
+            GridView3.Visible = false;
+            Button9.Visible = false;
+            Tercero.Visible = false;
+
+            GridView4.Visible = true;
+            Button10.Visible = true;
+            Cuarto.Visible = true;
+            Label1.Visible = true;
+            litMsg.Visible = true;
+
+            rptTable.Visible = false;
+            Button11.Visible = false;
+            Quinto.Visible = false;
+            Enunciado.Visible = false;
+
+            //GridView6.Visible = false;                        
+            //Button12.Visible = false;
+            loadgrid4();
+        }
+
+        public void loadgrid4() //Muestra las preguntas que estan en la base de datos
+        {            
+            con.Open();
+            cmd.CommandText = "select * from [MAQ]";
+            cmd.Connection = con;
+            //rd = cmd.ExecuteReader();
+            cmd.CommandType = CommandType.Text;
+            SqlDataAdapter da = new SqlDataAdapter();
+            da.SelectCommand = cmd;
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            if (dt.Rows.Count > 0)
+            {
+                GridView4.DataSource = dt;
+                GridView4.DataBind();
+                //rd.Dispose();
+            }
+            else
+            {
+                DataRow dr = dt.NewRow();
+                dt.Rows.Add(dr);
+                GridView4.DataSource = dt;
+                GridView4.DataBind();
+            }                                                          
+        }
+
+        //FALTA AJUSTAR ESTE MÉTODO
+        protected void Button10_Click(object sender, EventArgs e) //Transforma la respuesta dada en datos
+        {
+            foreach (GridViewRow GVR in GridView4.Rows)
+            {
+                CheckBoxList chk = (CheckBoxList)GVR.Cells[1].FindControl("CheckBoxList1");
+                string store = "";
+                foreach (ListItem li in chk.Items)
+                {
+                    if (li.Selected)
+                    {
+                        store += li.Value + ";";
+                    }
+                }
+                TextBox TextBox1 = (TextBox)GVR.Cells[0].FindControl("TextBox1");
+                TextBox1.Text = store;
+            }
+        }
+
+
+        //Preguntas de relación
+        protected void Button5_Click(object sender, EventArgs e) //Carga la interfaz de dichas preguntas
+        {
+            GridView1.Visible = false;
+            Button7.Visible = false;
+            Primero.Visible = false;
+
+            GridView2.Visible = false;
+            Button8.Visible = false;
+            Segundo.Visible = false;
+            Image1.Visible = false;
+
+            GridView3.Visible = false;
+            Button9.Visible = false;
+            Tercero.Visible = false;
+
+            GridView4.Visible = false;
+            Button10.Visible = false;
+            Cuarto.Visible = false;
+
+            rptTable.Visible = true;
+            Button11.Visible = true;
+            Quinto.Visible = true;
+            Label1.Visible = true;
+            Enunciado.Visible = true;
+            litMsg.Visible = true;
+
+            //GridView6.Visible = false;                        
+            //Button12.Visible = false;
+            loadgrid5();
+        }
+
+        public void loadgrid5() //Muestra las preguntas que estan en la base de datos
+        {
+            con.Open();
+            cmd.CommandText = "select * from [DQ]";
+            cmd.Connection = con;
+            SqlDataAdapter sda = new SqlDataAdapter(cmd);
+            DataSet ds = new DataSet();
+            sda.Fill(ds);
+            rptTable.DataSource = ds;
+            rptTable.DataBind();
+        }
+         /* *
+         * */
+
+
+        /*Preguntas de ordenar
+         * 
+         * 
+         * 
+         * */
 
 
         //Métodos Cómunes en cada tipo de preguntas
