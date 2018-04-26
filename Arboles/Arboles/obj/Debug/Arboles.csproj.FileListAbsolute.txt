@@ -1,10 +1,4 @@
-C:\Users\CRISTIAN\Documents\Visual Studio 2010\Projects\Arboles\Arboles\Arboles\bin\Arboles.dll
-C:\Users\CRISTIAN\Documents\Visual Studio 2010\Projects\Arboles\Arboles\Arboles\bin\Arboles.pdb
-C:\Users\CRISTIAN\Documents\Visual Studio 2010\Projects\Arboles\Arboles\Arboles\obj\Debug\Arboles.dll
-C:\Users\CRISTIAN\Documents\Visual Studio 2010\Projects\Arboles\Arboles\Arboles\obj\Debug\Arboles.pdb
-C:\Users\CRISTIAN\Documents\Visual Studio 2010\Projects\Arboles\Arboles\Arboles\obj\Debug\Arboles.csprojResolveAssemblyReference.cache
-D:\Proyecto Arboles\Arboles\Arboles\Arboles\bin\Arboles.dll
-D:\Proyecto Arboles\Arboles\Arboles\Arboles\bin\Arboles.pdb
-D:\Proyecto Arboles\Arboles\Arboles\Arboles\obj\Debug\Arboles.csprojResolveAssemblyReference.cache
-D:\Proyecto Arboles\Arboles\Arboles\Arboles\obj\Debug\Arboles.dll
-D:\Proyecto Arboles\Arboles\Arboles\Arboles\obj\Debug\Arboles.pdb
+C:\Users\lenovo\Desktop\Arboles\Arboles\bin\Arboles.dll
+C:\Users\lenovo\Desktop\Arboles\Arboles\bin\Arboles.pdb
+C:\Users\lenovo\Desktop\Arboles\Arboles\obj\Debug\Arboles.dll
+C:\Users\lenovo\Desktop\Arboles\Arboles\obj\Debug\Arboles.pdb
