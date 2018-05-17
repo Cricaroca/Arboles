@@ -6,3 +6,7 @@ C:\Users\CRISTIAN\Downloads\Arboles\Arboles\bin\Arboles.dll
 C:\Users\CRISTIAN\Downloads\Arboles\Arboles\bin\Arboles.pdb
 C:\Users\CRISTIAN\Downloads\Arboles\Arboles\obj\Debug\Arboles.dll
 C:\Users\CRISTIAN\Downloads\Arboles\Arboles\obj\Debug\Arboles.pdb
+C:\Users\CRISTIAN\Documents\Visual Studio 2010\Projects\Arboles\Arboles\obj\Debug\Arboles.pdb
+C:\Users\CRISTIAN\Documents\Visual Studio 2010\Projects\Arboles\Arboles\bin\Arboles.dll
+C:\Users\CRISTIAN\Documents\Visual Studio 2010\Projects\Arboles\Arboles\bin\Arboles.pdb
+C:\Users\CRISTIAN\Documents\Visual Studio 2010\Projects\Arboles\Arboles\obj\Debug\Arboles.dll

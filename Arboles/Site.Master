@@ -68,11 +68,7 @@
                                     </i>
                                 </div>
                                 <ul class="list-unstyled">
-                                    <li><a href="Ejercicios.aspx"><i class="zmdi zmdi-face zmdi-hc-fw"></i>&nbsp;&nbsp; Opción 1</a></li>
-                                </ul>
-                                <ul class="list-unstyled">
-                                    <li><a href=""><i class="zmdi zmdi-time-restore zmdi-hc-fw"></i>&nbsp;&nbsp; Ejercicios
-                                        <span class="label label-danger pull-right label-mhover">7</span></a> </li>
+                                    <li><a href="Ejercicios.aspx"><i class="zmdi zmdi-face zmdi-hc-fw"></i>&nbsp;&nbsp; Ejercicios</a></li>
                                 </ul>
                             </li>
                             <li>
@@ -84,6 +80,7 @@
                                     <li><a href="Valuacion.aspx"><i class="zmdi zmdi-book zmdi-hc-fw"></i>&nbsp;&nbsp; Examen</a></li>
                                 </ul>
                             </li>
+                            <li><a href="About.aspx"><i class=" zmdi zmdi-face zmdi-hc-fw"></i>&nbsp;&nbsp; Autores</a></li>
                         </ul>
                     </div>
                 </div>
@@ -145,7 +142,9 @@
                     </div>
                 </div>
             </div>
+            <%--
             <div class="footer-copyright full-reset all-tittles">2018 Johana Luna-Cristian Camilo Rodriguez</div>
+            --%>
         </footer>
     </div>
     </form>

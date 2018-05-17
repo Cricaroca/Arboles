@@ -10,12 +10,10 @@
             </div>
             <div class="col-xs-12 col-sm-8 col-md-8 col-lg-6 text-justify lead">
                 En este apartado usted aprender muchas cosas sobre los árboles de decisión.<br />
-                Los conceptos apareceran en forma de un "carrousel".<br />
-                Si quere continuar con este apartado y esta de acuerdo con estas condiciones,
-                por favor de click en boton "ACEPTAR".<br /><br />
+                Los conceptos apareceran en forma de un "carrousel".<br /><br />
             </div>
             <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 text-center lead">
-                <asp:Button ID="btn_start" runat="server" class="btn btn-primary btn-lg" Text="ACEPTAR" />
+                <asp:Button ID="btn_start" runat="server" class="btn btn-primary btn-lg" Text="EMPEZAR" />
             </div>
         </div>
     </div>

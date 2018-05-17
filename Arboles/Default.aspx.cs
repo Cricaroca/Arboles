@@ -13,5 +13,10 @@ namespace Arboles
         {
 
         }
+
+        protected void btn_continuar_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Conceptos.aspx");
+        }
     }
 }

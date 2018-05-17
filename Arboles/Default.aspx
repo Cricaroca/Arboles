@@ -5,6 +5,9 @@
 </asp:Content>
 <asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">
     
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
+        ConnectionString="<%$ ConnectionStrings:ConnectionString %>" 
+        SelectCommand="SELECT * FROM *"></asp:SqlDataSource>
     <div class="container-fluid" style="margin: 50px 0;">
         <div class="row">
             <div class="col-xs-12 col-sm-4 col-md-3">
@@ -17,11 +20,10 @@
                 En el apartado "practicar" usted podrá repasar los conceptos adquiridos.<br /> 
                 En el apartado "evaluar" usted podrá determinar cuanto sabe sobre árboles.
             </div>
-            <%-- 
             <div class="col-xs-12 col-sm-8 col-md-8 text-center lead">
-            <asp:Button ID="btn_continuar" class="btn btn-primary" runat="server" Text="Continuar" />
+                <asp:Button ID="btn_continuar" class="btn btn-primary" runat="server" 
+                    Text="Empezar" onclick="btn_continuar_Click" />
             </div>
-            --%>
         </div>
     </div>
 </asp:Content>

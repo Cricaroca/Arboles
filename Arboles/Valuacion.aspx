@@ -16,10 +16,10 @@
                 preguntas de selección múltiple con múltiple respuesta, preguntas de falso y
                 verdadero, preguntas abiertas, ordenamiento y relaciones.<br />
                 Si quere continuar con el examen y esta de acuerdo con estas condiciones,
-                por favor de click en boton "ACEPTAR".<br /><br />
+                por favor de click en boton "INICIAR".<br /><br />
             </div>
             <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 text-center lead">
-                <asp:Button ID="btn_start" runat="server" class="btn btn-primary btn-lg" Text="ACEPTAR" onclick="btn_start_Click" />
+                <asp:Button ID="btn_start" runat="server" class="btn btn-primary btn-lg" Text="INICIAR" onclick="btn_start_Click" />
             </div>
         </div>
     </div>
