@@ -31,6 +31,7 @@ namespace Arboles
             if (!Page.IsPostBack)
             {
                 Session["Timer"] = DateTime.Now.AddMinutes(15).ToString();
+                pregunta1();
                 loadgrid1();
             }
         }
@@ -91,6 +92,7 @@ namespace Arboles
             CheckBoxList1.Visible = false;
             Button10.Visible = false;
             Cuarto.Visible = false;
+            Question4.Visible = false;
 
             loadgrid1();
         }
@@ -102,6 +104,7 @@ namespace Arboles
 
         public void loadgrid1() //Muestra las preguntas que estan en la base de datos
         {
+            con.Close();
             con.Open();
             cmd.CommandText = "select * from [MCQ]";
             cmd.Connection = con;
@@ -149,7 +152,7 @@ namespace Arboles
 
         private void check_number1(string text) //Comprueba si la respuesta dada es la correcta
         {
-            Inicializar();
+            //Inicializar();
             con.Open();
             cmd.CommandText = "select * from [MCQ] where mcq_id=@qid" + count;
             cmd.Parameters.AddWithValue("@qid" + count, text);
@@ -195,6 +198,7 @@ namespace Arboles
             CheckBoxList1.Visible = false;
             Button10.Visible = false;
             Cuarto.Visible = false;
+            Question4.Visible = false;
 
             loadgrid2();
         }
@@ -206,6 +210,7 @@ namespace Arboles
 
         public void loadgrid2() //Muestra las preguntas que estan en la base de datos
         {
+            con.Close();
             con.Open();
             cmd.CommandText = "select * from [OQ]";
             cmd.Connection = con;
@@ -241,7 +246,7 @@ namespace Arboles
 
         private void check_number2(string p) //Comprueba si la respuesta dada es la correcta
         {
-            Inicializar();
+            //Inicializar();
             con.Open();
             cmd.CommandText = "select * from [OQ] where oq_id=@qid" + count;
             cmd.Parameters.AddWithValue("@qid" + count, p);
@@ -287,6 +292,7 @@ namespace Arboles
             CheckBoxList1.Visible = false;
             Button10.Visible = false;
             Cuarto.Visible = false;
+            Question4.Visible = false;
 
             loadgrid3();
         }
@@ -298,6 +304,7 @@ namespace Arboles
 
         public void loadgrid3() //Muestra las preguntas que estan en la base de datos
         {
+            con.Close();
             con.Open();
             cmd.CommandText = "select * from [TFQ]";
             cmd.Connection = con;
@@ -334,7 +341,7 @@ namespace Arboles
 
         private void check_number3(string text) //Comprueba si la respuesta dada es la correcta
         {
-            Inicializar();
+            //Inicializar();
             con.Open();
             cmd.CommandText = "select * from [TFQ] where tfq_id=@qid" + count;
             cmd.Parameters.AddWithValue("@qid" + count, text);
@@ -380,6 +387,7 @@ namespace Arboles
             Cuarto.Visible = true;
             General.Visible = true;
             litMsg.Visible = true;
+            Question4.Visible = true;
 
             loadgrid4();
         }
@@ -460,6 +468,7 @@ namespace Arboles
                 con.Close();
                 llenar_arbol();
                 saveintodatabase(correct_answer, arbol.Count);
+                Response.Redirect("Resultado.aspx");
             }
         }
 

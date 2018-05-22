@@ -71,7 +71,7 @@
                     <Columns>
                         <asp:TemplateField>
                             <ItemTemplate>
-                                <asp:Label runat="server" ID="QuestionId3" Text='<%# Eval("tfq_id") %>' /><br />
+                                <asp:Label runat="server" ID="QuestionId3" Text='<%# Eval("tfq_id") %>' />
                                 <asp:Label runat="server" ID="Question3" Text='<%# Eval("Question") %>' /><br />
                                 <asp:RadioButton GroupName="b" runat="server" ID="ans1" Text='<%# Eval("answer1") %>' /><br />
                                 <asp:RadioButton GroupName="b" runat="server" ID="ans2" Text='<%# Eval("answer2") %>' /><br />

@@ -14,47 +14,31 @@ namespace Arboles
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            if (!Page.IsPostBack)
+            {
+                loadgrid();
+            }
         }
         
 
-        public Resultado()
+        public void loadgrid()
         {                        
             SqlConnection con = new SqlConnection();
             con.ConnectionString = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
             con.Open();
-            string r1 = "SELECT [result_ans] FROM [RESULTADO] WHERE Result_id=1";
-            string r2 = "SELECT [result_ans] FROM [RESULTADO] WHERE Result_id=2";
-            string r3 = "SELECT [result_ans] FROM [RESULTADO] WHERE Result_id=3";
-            string r4 = "SELECT [result_ans] FROM [RESULTADO] WHERE Result_id=4";
-            string tq1 = "select [total_question] from [RESULTADO] WHERE Result_id=1";
-            string tq2 = "select [total_question] from [RESULTADO] WHERE Result_id=2";
-            string tq3 = "select [total_question] from [RESULTADO] WHERE Result_id=3";
-            string tq4 = "select [total_question] from [RESULTADO] WHERE Result_id=4";
-            SqlCommand cmr1 = new SqlCommand(r1, con);
-            SqlCommand cmr2 = new SqlCommand(r2, con);
-            SqlCommand cmr3 = new SqlCommand(r3, con);
-            SqlCommand cmr4 = new SqlCommand(r4, con);
-            SqlCommand cmtq1 = new SqlCommand(tq1, con);
-            SqlCommand cmtq2 = new SqlCommand(tq2, con);
-            SqlCommand cmtq3 = new SqlCommand(tq3, con);
-            SqlCommand cmtq4 = new SqlCommand(tq4, con);
-            int a1 = Convert.ToInt32(cmr1.ExecuteScalar().ToString());
-            int a2 = Convert.ToInt32(cmr2.ExecuteScalar().ToString());
-            int a3 = Convert.ToInt32(cmr3.ExecuteScalar().ToString());
-            int a4 = Convert.ToInt32(cmr4.ExecuteScalar().ToString());
-            int t1 = Convert.ToInt32(cmtq1.ExecuteScalar().ToString());
-            int t2 = Convert.ToInt32(cmtq2.ExecuteScalar().ToString());
-            int t3 = Convert.ToInt32(cmtq3.ExecuteScalar().ToString());
-            int t4 = Convert.ToInt32(cmtq4.ExecuteScalar().ToString());
-            int r = a1+a2+a3+a4;
-            int q = t1+t2+t3+t4;
+            string result_ans = "SELECT SUM(Result_ans) FROM Resultado";
+            string total_question = "SELECT SUM(Total_Question) FROM Resultado";
+            SqlCommand cmr = new SqlCommand(result_ans, con);
+            SqlCommand cmq = new SqlCommand(total_question, con);
+            int r = Convert.ToInt32(cmr.ExecuteScalar().ToString());
+            int q = Convert.ToInt32(cmq.ExecuteScalar().ToString());
             calcular(r,q);
+            con.Close();
         }
 
-        public void calcular(int r, int q)
+        public void calcular(int ans, int total)
         {
-            double porcentaje = (r * 100) / q;
+            double porcentaje = (ans * 100) / total;
             if (porcentaje < 33)
             {
                 Label1.Text = "Perdió el examen";
