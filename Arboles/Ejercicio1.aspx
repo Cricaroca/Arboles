@@ -1,24 +1,33 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Ejercicio1.aspx.cs" Inherits="Arboles.Ejercicio1" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
-
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+	<title>Binary Tree</title>
+<!-- <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script> -->
+ 	<script type="text/javascript" src="Scripts/jquery-1.6.2.js"></script> 
+	<script type="text/javascript" src="Scripts/binary_node.js?x=1"></script>
+	<script type="text/javascript" src="Scripts/binary_tree.js?x=1"></script>
+	<script type="text/javascript" src="Scripts/binary_tree_drawer.js?x=1"></script>
+	<script type="text/javascript" src="Scripts/binary_web.js?x=2"></script>
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-    <%--
-    <asp:Image ID="pictureBox1" runat="server" /><br />
-    <asp:Label ID="lbltime" runat="server" Text="test" /><br />
-    <asp:Label ID="lblMsg" runat="server" Text="Messages" /><br />
-    <asp:Label ID="lblBaseX" runat="server" Text="Base X" />
-    <asp:TextBox ID="txtBaseX" runat="server" /><br />
-    <asp:Label ID="lblBaseY" runat="server" Text="Base Y" />
-    <asp:TextBox ID="txtBaseY" runat="server" /><br />
-    <asp:Label ID="lblTreeLevel" runat="server" Text="Tree level (max is 10)" />
-    <asp:TextBox ID="txtTreeLevel" runat="server" />
-    <asp:Label ID="lblCount" runat="server" Text="0" style="float:right"/>
-    <asp:Label ID="label2" runat="server" Text="Node Count:" style="float:right"/>
-    <br />
-    <br />
-    <asp:Button ID="btnCreate" runat="server" Text="Create" />
-    <asp:Button ID="btnCheck" runat="server" Text="Check" />
-    --%>
+    <h1>Binary Tree</h1>
+<p>A sample binary tree in CoffeeScript</p>
+	
+<form action="#">
+	Value to add: <input type="text" id="newNode">
+	<input type="submit" id="submit" value="Add it!">
+</form>
+
+<h2>Values in Tree</h2>
+<div id="binaryTreeValues"></div>
+
+<canvas id="theCanvas" width="600" height="600" style="border:1px dotted;">
+HTML 5 Canvas is not supported in your browser
+</canvas>
+<p id="noCanvas"></p>
+<br /><br />
+    
+<asp:Button ID="Button1" runat="server" Text="Siguiente" class="btn btn-warning" 
+        onclick="Button1_Click" style="float:right;" Font-Size="XX-Large" />
 </asp:Content>

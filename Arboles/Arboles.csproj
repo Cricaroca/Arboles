@@ -69,6 +69,12 @@
     <Content Include="Ejercicios.aspx" />
     <Content Include="Examen.aspx" />
     <Content Include="Resultado.aspx" />
+    <Content Include="Scripts\binary_console.js" />
+    <Content Include="Scripts\binary_node.js" />
+    <Content Include="Scripts\binary_tree.js" />
+    <Content Include="Scripts\binary_tree_drawer.js" />
+    <Content Include="Scripts\binary_web.js" />
+    <Content Include="Scripts\jquery-1.6.2.js" />
     <Content Include="Styles\assets\icons\book.ico" />
     <Content Include="Styles\assets\icons\mCSB_buttons.png" />
     <Content Include="Styles\assets\icons\SelectMaterialIndicator-white.png" />
@@ -175,9 +181,6 @@
     <Compile Include="Account\Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
     </Compile>
-    <Compile Include="BinaryTree.cs">
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
     <Compile Include="Conceptos.aspx.cs">
       <DependentUpon>Conceptos.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -223,7 +226,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Node.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Resultado.aspx.cs">
       <DependentUpon>Resultado.aspx</DependentUpon>

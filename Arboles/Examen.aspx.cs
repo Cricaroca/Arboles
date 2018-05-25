@@ -490,7 +490,9 @@ namespace Arboles
         private void saveintodatabase(int cn, int p1)
         {
             con.Open();
-            if (GridView1.Visible == true)
+            SqlCommand check_mcq = new SqlCommand("SELECT COUNT(*) FROM [Resultado] WHERE ([Result_id] = '1')", con);
+            int mcqexist = (int)check_mcq.ExecuteScalar();
+            if (GridView1.Visible == true && mcqexist == 0)
             {
                 cmd.CommandText = "insert into [Resultado] (Result_id,Result_ans,Total_Question)values('1',@rans,@td)";
                 cmd.Parameters.AddWithValue("@rans", cn.ToString());
@@ -498,7 +500,17 @@ namespace Arboles
                 cmd.Connection = con;
                 cmd.ExecuteNonQuery();
             }
-            else if (GridView2.Visible == true)
+            else if (GridView1.Visible == true && mcqexist == 1)
+            {
+                cmd.CommandText = "UPDATE [Resultado] SET Result_ans=@rans , Total_Question=@td WHERE Result_id='1'";
+                cmd.Parameters.AddWithValue("@rans", cn.ToString());
+                cmd.Parameters.AddWithValue("@td", p1.ToString());
+                cmd.Connection = con;
+                cmd.ExecuteNonQuery();
+            }
+            SqlCommand check_oq = new SqlCommand("SELECT COUNT(*) FROM [Resultado] WHERE ([Result_id] = '2')", con);
+            int oqexist = (int)check_oq.ExecuteScalar();
+            if (GridView2.Visible == true && oqexist == 0)
             {
                 cmd.CommandText = "insert into [Resultado] (Result_id,Result_ans,Total_Question)values('2',@rans,@td)";
                 cmd.Parameters.AddWithValue("@rans", cn.ToString());
@@ -506,7 +518,17 @@ namespace Arboles
                 cmd.Connection = con;
                 cmd.ExecuteNonQuery();
             }
-            else if (GridView3.Visible == true)
+            else if (GridView2.Visible == true && oqexist == 1)
+            {
+                cmd.CommandText = "UPDATE [Resultado] SET Result_ans=@rans , Total_Question=@td WHERE Result_id='2'";
+                cmd.Parameters.AddWithValue("@rans", cn.ToString());
+                cmd.Parameters.AddWithValue("@td", p1.ToString());
+                cmd.Connection = con;
+                cmd.ExecuteNonQuery();
+            }
+            SqlCommand check_tfq = new SqlCommand("SELECT COUNT(*) FROM [Resultado] WHERE ([Result_id] = '3')", con);
+            int tfqexist = (int)check_tfq.ExecuteScalar();
+            if (GridView3.Visible == true && tfqexist == 0)
             {
                 cmd.CommandText = "insert into [Resultado] (Result_id,Result_ans,Total_Question)values('3',@rans,@td)";
                 cmd.Parameters.AddWithValue("@rans", cn.ToString());
@@ -514,15 +536,32 @@ namespace Arboles
                 cmd.Connection = con;
                 cmd.ExecuteNonQuery();
             }
-            else
+            else if (GridView3.Visible == true && tfqexist == 1)
+            {
+                cmd.CommandText = "UPDATE [Resultado] SET Result_ans=@rans , Total_Question=@td WHERE Result_id='3'";
+                cmd.Parameters.AddWithValue("@rans", cn.ToString());
+                cmd.Parameters.AddWithValue("@td", p1.ToString());
+                cmd.Connection = con;
+                cmd.ExecuteNonQuery();
+            }
+            SqlCommand check_maq = new SqlCommand("SELECT COUNT(*) FROM [Resultado] WHERE ([Result_id] = '4')", con);
+            int maqexist = (int)check_maq.ExecuteScalar();
+            if (CheckBoxList1.Visible == true && maqexist == 0)
             {
                 cmd.CommandText = "insert into [Resultado] (Result_id,Result_ans,Total_Question)values('4',@rans,@td)";
                 cmd.Parameters.AddWithValue("@rans", cn.ToString());
                 cmd.Parameters.AddWithValue("@td", p1.ToString());
                 cmd.Connection = con;
                 cmd.ExecuteNonQuery();
-            }                        
+            }
+            else if (CheckBoxList1.Visible == true && maqexist == 1)
+            {
+                cmd.CommandText = "UPDATE [Resultado] SET Result_ans=@rans , Total_Question=@td WHERE Result_id='4'";
+                cmd.Parameters.AddWithValue("@rans", cn.ToString());
+                cmd.Parameters.AddWithValue("@td", p1.ToString());
+                cmd.Connection = con;
+                cmd.ExecuteNonQuery();
+            }
         }
-
     }
 }

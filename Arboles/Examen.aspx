@@ -28,7 +28,7 @@
         <div class="row">
             <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
                 <asp:Label ID="Primero" runat="server" Text="Preguntas de Selección Multiple con única respuesta" Font-Bold="True" Font-Italic="True" Font-Size="Large" ForeColor="#009900" />
-                <asp:GridView ShowHeader="false" ShowFooter="false" AutoGenerateColumns="false" ID="GridView1" runat="server" GridLines="None" Visible="true">
+                <asp:GridView ShowHeader="false" ShowFooter="false" AutoGenerateColumns="false" ID="GridView1" runat="server" GridLines="None" Visible="true" CssClass="text-left">
                     <Columns>
                         <asp:TemplateField>
                             <ItemTemplate>
@@ -51,7 +51,7 @@
                 <asp:Label runat="server" ID="Aclaracion" Text="Por favor, escriba su respuesta de la siguiente manera: A,B,C..." Visible="false" />
                 <asp:GridView ShowHeader="false" ShowFooter="false" 
                      AutoGenerateColumns="false" ID="GridView2" runat="server" GridLines="None" 
-                     Visible="true">
+                     Visible="true"  CssClass="text-left">
                      <Columns>
                          <asp:TemplateField>
                              <ItemTemplate>
@@ -67,7 +67,7 @@
             </div>
             <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
                 <asp:Label ID="Tercero" runat="server" Text="Preguntas de Falso y Verdadero con única respuesta" Font-Bold="True" Font-Italic="True" Font-Size="Large" ForeColor="#009900" Visible="false"/><br />
-                <asp:GridView ShowHeader="false" ShowFooter="false" AutoGenerateColumns="false" ID="GridView3" runat="server" GridLines="None" Visible="false">
+                <asp:GridView ShowHeader="false" ShowFooter="false" AutoGenerateColumns="false" ID="GridView3" runat="server" GridLines="None" Visible="false" CssClass="text-left">
                     <Columns>
                         <asp:TemplateField>
                             <ItemTemplate>
@@ -85,7 +85,7 @@
             <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
                 <asp:Label ID="Cuarto" runat="server" Text="Pregunta de Selección Multiple con múltiple respuesta" Font-Bold="True" Font-Italic="True" Font-Size="Large" ForeColor="#009900"/><br />
                 <asp:Label runat="server" ID="Question4" Text="1. ¿Cuáles son propiedades de los árboles?" /><br />
-                <asp:CheckBoxList ID="CheckBoxList1" runat="server"> </asp:CheckBoxList>
+                <asp:CheckBoxList ID="CheckBoxList1" runat="server"  CssClass="text-left"> </asp:CheckBoxList>
                 <asp:Button ID="Button10" runat="server" class="btn btn-success btn-lg" Text="Guardar y Continuar" 
                      onclick="Button10_Click"/><br />
             </div>            
