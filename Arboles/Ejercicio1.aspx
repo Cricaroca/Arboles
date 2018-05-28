@@ -16,8 +16,7 @@
 	
 <form action="#">
     
-	Value to add: <input type="text" id="newNode" /><asp:RegularExpressionValidator
-        ID="RegularExpressionValidator1" runat="server" ErrorMessage="Solo Numeros" ControlToValidate="newNode" Text="*" ValidationExpression="^[0-9]*$"></asp:RegularExpressionValidator>
+	Value to add: <input type="text" id="newNode" />
 	<input type="submit" id="submit" value="Add it!" />
 </form>
 

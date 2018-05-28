@@ -13,5 +13,10 @@ namespace Arboles
         {
 
         }
+
+        protected void btn_start_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Ejercicio1.aspx");
+        }
     }
 }

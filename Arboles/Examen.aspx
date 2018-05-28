@@ -57,8 +57,7 @@
                              <ItemTemplate>
                                  <asp:Label runat="server" ID="QuestionId2" Text='<%# Eval("oq_id") %>' />
                                  <asp:Label runat="server" ID="Question2" Text='<%# Eval("Question") %>' /><br />
-                                 <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
-                                 <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ErrorMessage="Solo letras" ControlToValidate="TextBox1" ValidationExpression="^[A-Z]*$" Text="*"></asp:RegularExpressionValidator>
+                                 <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>                                 
                              </ItemTemplate>
                          </asp:TemplateField>
                      </Columns>

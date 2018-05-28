@@ -15,10 +15,10 @@
                     style="max-width: 110px;" />
             </div>
             <div class="col-xs-12 col-sm-8 col-md-8 text-justify lead">
-                Esta herramienta le permitirá adquirir conocimiento sobre árboles de decisión.<br />
-                En el apartado "aprender" usted podrá conocer los conceptos básicos sobre árboles.<br /> 
-                En el apartado "practicar" usted podrá repasar los conceptos adquiridos.<br /> 
-                En el apartado "evaluar" usted podrá determinar cuanto sabe sobre árboles.
+                Esta herramienta le permitirá adquirir conocimiento sobre Árboles de Decisión:<br />
+                En el apartado "APRENDER" usted podrá conocer los conceptos básicos sobre árboles.<br /> 
+                En el apartado "PRACTICAR" usted podrá repasar los conceptos adquiridos.<br /> 
+                En el apartado "EVALUAR" usted podrá determinar cuanto sabe sobre árboles.
             </div>
             <div class="col-xs-12 col-sm-8 col-md-8 text-center lead">
                 <asp:Button ID="btn_continuar" class="btn btn-primary" runat="server" 

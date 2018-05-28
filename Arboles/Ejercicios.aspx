@@ -9,11 +9,12 @@
                     style=" "/>                
             </div>
             <div class="col-xs-12 col-sm-8 col-md-8 col-lg-6 text-justify lead">
-                En este apartado usted podrá a través de ejercios, reforzar lo aprendido en el apartado "Aprender".<br />
-                El resultado aparecerauna vez finalice el ejercicio.<br /><br />
+                En este apartado usted aprende haciendo, a través de ejercicios, que le reforzará lo aprendido en el apartado "Aprender".<br />
+                <br /><br />
             </div>
             <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 text-center lead">
-                <asp:Button ID="btn_start" runat="server" class="btn btn-primary btn-lg" Text="COMENZAR" />
+                <asp:Button ID="btn_start" runat="server" class="btn btn-primary btn-lg" 
+                    Text="COMENZAR" onclick="btn_start_Click" />
             </div>
         </div>
     </div>

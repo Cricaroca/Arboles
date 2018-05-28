@@ -39,20 +39,23 @@ namespace Arboles
         public void calcular(int ans, int total)
         {
             double porcentaje = (ans * 100) / total;
-            if (porcentaje < 33)
+            if (porcentaje < 60)
             {
                 Label1.Text = "Perdió el examen";
                 Label2.Text = "Su puntaje fue de: " + porcentaje.ToString() + "%";
+                Label3.Text = "Obtuvó  "+ ans + "  resuestas correctas de  " + total + "  posibles";
             }
-            else if (porcentaje >= 33 && porcentaje < 60)
+            else if (porcentaje >= 60 && porcentaje < 80)
             {
                 Label1.Text = "Pasó el examen";
                 Label2.Text = "Su puntaje fue de: " + porcentaje.ToString() + "%";
+                Label3.Text = "Obtuvó  " + ans + "  resuestas correctas de  " + total + "  posibles";
             }
-            else if (porcentaje >= 60 && porcentaje < 100)
+            else if (porcentaje >= 80 && porcentaje < 100)
             {
                 Label1.Text = "En hora buena, Pasó el examen con una buena calificacion";
                 Label2.Text = "Su puntaje fue de: " + porcentaje.ToString() + "%";
+                Label3.Text = "Obtuvó  " + ans + "  resuestas correctas de  " + total + "  posibles";
             }
             else if (porcentaje == 100)
             {
