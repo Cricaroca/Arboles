@@ -30,9 +30,8 @@ namespace Arboles
         {
             if (!Page.IsPostBack)
             {
-                Session["Timer"] = DateTime.Now.AddMinutes(15).ToString();
+                Session["Timer"] = DateTime.Now.AddMinutes(10).ToString();
                 pregunta1();
-                loadgrid1();
             }
         }
 
@@ -268,7 +267,27 @@ namespace Arboles
             rd.Dispose();
             count++;
         }
-
+        /*
+        private void TextBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsLetter(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+        */
 
         //Pregunta de Falso y Verdadero
         public void pregunta3() //Establece la grilla de la pregunta correspondiente

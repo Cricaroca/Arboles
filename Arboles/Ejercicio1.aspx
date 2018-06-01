@@ -28,7 +28,4 @@ HTML 5 Canvas is not supported in your browser
 </canvas>
 <p id="noCanvas"></p>
 <br /><br />
-    
-<asp:Button ID="Button1" runat="server" Text="Siguiente" class="btn btn-warning" 
-        onclick="Button1_Click" style="float:right;" Font-Size="XX-Large" />
 </asp:Content>

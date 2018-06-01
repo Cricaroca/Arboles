@@ -65,7 +65,6 @@
     </Content>
     <Content Include="Conceptos.aspx" />
     <Content Include="Ejercicio1.aspx" />
-    <Content Include="Ejercicio2.aspx" />
     <Content Include="Ejercicios.aspx" />
     <Content Include="Examen.aspx" />
     <Content Include="Resultado.aspx" />
@@ -94,15 +93,37 @@
     <Content Include="Styles\assets\img\chart.png" />
     <Content Include="Styles\assets\img\checklist.png" />
     <Content Include="Styles\assets\img\clock.png" />
+    <Content Include="Styles\assets\img\Est1.png" />
+    <Content Include="Styles\assets\img\Est2.PNG" />
     <Content Include="Styles\assets\img\examen.jpg" />
     <Content Include="Styles\assets\img\exercise-257x300.png" />
     <Content Include="Styles\assets\img\flat-book.png" />
     <Content Include="Styles\assets\img\font-login.jpg" />
+    <Content Include="Styles\assets\img\Img1.PNG" />
+    <Content Include="Styles\assets\img\Img2.PNG" />
+    <Content Include="Styles\assets\img\Img3.PNG" />
+    <Content Include="Styles\assets\img\Img4.PNG" />
     <Content Include="Styles\assets\img\institution.png" />
+    <Content Include="Styles\assets\img\jlr.jpg" />
     <Content Include="Styles\assets\img\logo.png" />
     <Content Include="Styles\assets\img\logoarbol.png" />
     <Content Include="Styles\assets\img\pdf.png" />
+    <Content Include="Styles\assets\img\Prop1.png" />
+    <Content Include="Styles\assets\img\Prop2.png" />
+    <Content Include="Styles\assets\img\Prop3.png" />
+    <Content Include="Styles\assets\img\Prop4.png" />
+    <Content Include="Styles\assets\img\Recor1.png" />
+    <Content Include="Styles\assets\img\Recor2.png" />
+    <Content Include="Styles\assets\img\Recor3.png" />
+    <Content Include="Styles\assets\img\Recor4.png" />
+    <Content Include="Styles\assets\img\Recor5.png" />
+    <Content Include="Styles\assets\img\Recor6.png" />
+    <Content Include="Styles\assets\img\Recor7.png" />
+    <Content Include="Styles\assets\img\Recor8.png" />
     <Content Include="Styles\assets\img\section.png" />
+    <Content Include="Styles\assets\img\Tipos1.png" />
+    <Content Include="Styles\assets\img\Tipos2.png" />
+    <Content Include="Styles\assets\img\Tipos3.png" />
     <Content Include="Styles\assets\img\udi.jpg" />
     <Content Include="Styles\assets\img\user-sesion.png" />
     <Content Include="Styles\assets\img\user.png" />
@@ -201,13 +222,6 @@
     </Compile>
     <Compile Include="Ejercicio1.aspx.designer.cs">
       <DependentUpon>Ejercicio1.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Ejercicio2.aspx.cs">
-      <DependentUpon>Ejercicio2.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Ejercicio2.aspx.designer.cs">
-      <DependentUpon>Ejercicio2.aspx</DependentUpon>
     </Compile>
     <Compile Include="Ejercicios.aspx.cs">
       <DependentUpon>Ejercicios.aspx</DependentUpon>
